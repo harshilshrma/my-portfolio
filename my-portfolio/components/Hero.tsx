@@ -12,7 +12,7 @@ export default function Hero() {
                 <div className="space-y-4">
                     <h1 className="text-5xl text-left font-bold my-4">Hey there, welcome to my corner of the web!</h1>
                     <p className="text-lg text-justify mb-4">
-                        I'm Harshil Sharma, a passionate web developer based in India. Here, you'll get a <i><s>polished</s></i> glimpse of my tech shenanigans, where I create .
+                        I&apos;m Harshil Sharma, a passionate web developer based in India. Here, you&apos;ll get a <s>polished</s> glimpse of my tech shenanigans, as I gear up to create innovative tech products, services, and ventures that could benefit others 🌍✨🛠️
                     </p>
                 </div>
                 <div className="lg:block">
