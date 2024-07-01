@@ -15,7 +15,7 @@ export default function Clients() {
 
     return (
         <section className="my-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">I've worked at</h2>
+            <h2 className="text-4xl font-bold mb-4">I've worked at</h2>
             <div className="flex justify-center space-x-4">
                 <Image
                     src={isDarkMode ? "/tubemagic.png" : "/tm-bl.png"}
