@@ -1,4 +1,4 @@
-import { BellRing, Check, Github, Linkedin, Globe, Youtube } from "lucide-react"
+import { BellRing, Linkedin, Globe } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -12,6 +12,9 @@ import {
 } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
 import { Progress } from "@/components/ui/progress"
+import Image from "next/image";
+import YouTubeIcon from "./icon/YoutubeIcon"
+import GithubIcon from "./icon/GithubIcon"
 
 type ProjectCardProps = {
     projectName: string;
@@ -42,7 +45,7 @@ export function ProjectCard({
             <CardHeader>
                 <CardTitle>{projectName}</CardTitle>
                 <CardDescription>{projectDescription}</CardDescription>
-                <img src={projectImage} alt={projectName} className="w-full h-auto mt-4 rounded-md" />
+                <Image src={projectImage} width={250} height={200} alt={projectName} className="w-full h-auto mt-4 rounded-md" />
             </CardHeader>
 
             <CardContent className="grid gap-4">
@@ -60,10 +63,11 @@ export function ProjectCard({
                     <Switch />
                 </div>
             </CardContent>
+
             <CardFooter className="flex justify-around">
                 {githubLink && (
                     <a href={githubLink} target="_blank" rel="noopener noreferrer" className="">
-                        <Github className="h-6 w-6" />
+                        <GithubIcon />
                     </a>
                 )}
                 {linkedinLink && (
@@ -78,7 +82,7 @@ export function ProjectCard({
                 )}
                 {youtubeLink && (
                     <a href={youtubeLink} target="_blank" rel="noopener noreferrer" className="">
-                        <Youtube className="h-6 w-6" />
+                        <YouTubeIcon />
                     </a>
                 )}
             </CardFooter>

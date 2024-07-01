@@ -8,24 +8,11 @@ export default function Projects() {
             projectName: 'Project 1',
             projectDescription: 'This project involves building a web application for managing customer data.',
             progress: 34,
-
-    // projectImage,
-    // progress,
-    // githubLink,
-    // linkedinLink,
-    // websiteLink,
-    // youtubeLink,
-            
-        },
-        {
-            projectName: 'Project 2',
-            projectDescription: 'Developing a mobile app for tracking fitness activities and health metrics.',
-            progress: 12,
-        },
-        {
-            projectName: 'Project 3',
-            projectDescription: 'Creating a machine learning model for predicting stock prices based on historical data.',
-            progress: 87,
+            projectImage: '/',
+            githubLink: ' ',
+            linkedinLink: ' ',
+            websiteLink: ' ',
+            youtubeLink: ' '
         },
     ];
 
@@ -40,6 +27,11 @@ export default function Projects() {
                         projectName={project.projectName}
                         projectDescription={project.projectDescription}
                         progress={project.progress}
+                        projectImage={project.projectImage}
+                        githubLink={project.githubLink}
+                        linkedinLink={project.linkedinLink}
+                        websiteLink={project.websiteLink}
+                        youtubeLink={project.youtubeLink}
                         className=""
                     />
                 ))}

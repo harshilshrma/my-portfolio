@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 
+
 export default function Hero() {
     return (
         <section className="text-center my-8">
@@ -12,7 +13,7 @@ export default function Hero() {
                 <div className="space-y-4">
                     <h1 className="text-5xl text-left font-bold my-4">Hey there, welcome to my corner of the web!</h1>
                     <p className="text-lg text-justify mb-4">
-                        I'm Harshil Sharma, a passionate web developer based in India. Here, you'll get a <s>polished</s> glimpse of my tech shenanigans, where I create whatever the <i>heck</i> I want.
+                        I&apos;m Harshil Sharma, a passionate web developer based in India. Here, you&apos;ll get a <s>polished</s> glimpse of my tech shenanigans, where I create whatever the <i>heck</i> I want.
                     </p>
                 </div>
                 <div className="lg:block">
