@@ -6,18 +6,25 @@ import Clients from "@/components/Clients";
 import Skills from "@/components/Skills";
 import Projects from '@/components/Projects';
 
+const sectionStyle = {
+  marginBottom: '2rem', // Adjust the spacing as needed
+};
+
 export default function Home(): JSX.Element {
   return (
     <div className="container mx-auto p-4">
       <section id="hero">
         <Hero />
       </section>
+
       <section id="about">
         <Clients />
       </section>
+
       <section id="skills">
         <Skills />
       </section>
+
       <section id="projects">
         <Projects />
       </section>

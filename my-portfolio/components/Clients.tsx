@@ -16,15 +16,16 @@ export default function Clients() {
     return (
         <section className="my-8 text-center">
             <h2 className="text-4xl font-bold mb-4">I&apos;ve worked at</h2>
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center items-center space-x-4">
                 <Image
                     src={isDarkMode ? "/tubemagic.png" : "/tm-bl.png"}
                     alt="tubemagic"
                     width={200}
                     height={100}
                 />
-                <span>With You?</span>
+                <div className="text-lg">... and maybe with you  next?</div>
             </div>
+            <div className="my-8"></div>
         </section>
     );
 }
