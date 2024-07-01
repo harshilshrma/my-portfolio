@@ -1,17 +1,18 @@
 "use client"
 
-import Image from "next/image";
-import {Button } from "@/components/ui/button";
-import type { JSX } from 'react'; 
-import { ModeToggle } from "@/components/mode-toggle";
+import type { JSX } from 'react';
+import Hero from "@/components/Hero";
+import Clients from "@/components/Clients";
+import Skills from "@/components/Skills";
+import Projects from '@/components/Projects';
 
 export default function Home(): JSX.Element {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <Button>Click me</Button>
-        <ModeToggle></ModeToggle>
-      </div>
-    </main>
+    <div className="container mx-auto p-4">
+      <Hero />
+      <Clients />
+      <Skills />
+      <Projects />
+    </div>
   );
 }
