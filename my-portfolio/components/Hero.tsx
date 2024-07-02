@@ -22,7 +22,7 @@ export default function Hero() {
                         alt="Harshil Sharma"
                         width={500}
                         height={600}
-                        className="mx-auto rounded-xl object-cover"
+                        className="mx-auto rounded-xl object-cover shadow-md"
                     />
                 </div>
             </div>

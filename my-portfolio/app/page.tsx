@@ -5,10 +5,9 @@ import Hero from "@/components/Hero";
 import Clients from "@/components/Clients";
 import Skills from "@/components/Skills";
 import Projects from '@/components/Projects';
-
-const sectionStyle = {
-  marginBottom: '2rem', // Adjust the spacing as needed
-};
+import Recommendations from '@/components/Recommendations';
+import ContactPage from '@/components/Contact';
+import { Separator } from "@/components/ui/separator";
 
 export default function Home(): JSX.Element {
   return (
@@ -28,6 +27,15 @@ export default function Home(): JSX.Element {
       <section id="projects">
         <Projects />
       </section>
+
+      <section id="recs">
+        <Recommendations />
+      </section>
+
+      <section id="contact">
+        <ContactPage />
+      </section>
+
     </div>
   );
 }

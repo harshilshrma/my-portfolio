@@ -14,7 +14,9 @@ export default function Projects() {
             linkedinLink: 'https://www.linkedin.com/posts/harshilshrma_ratemytrain-webdevelopment-nextjs-activity-7212913163296464896-_JPa?utm_source=share&utm_medium=member_desktop',
             websiteLink: 'https://ratemytrain.vercel.app',
             youtubeLink: 'https://yt.openinapp.co/ratemytrain',
-            xlink: 'https://twtr.openinapp.co/rmtpost'
+            xlink: 'https://twtr.openinapp.co/rmtpost',
+            subhead: '',
+            subtext: ''
         },
     ];
 
@@ -35,7 +37,8 @@ export default function Projects() {
                         websiteLink={project.websiteLink}
                         youtubeLink={project.youtubeLink}
                         xlink={project.xlink}
-                        className=""
+                        subhead={project.subhead}
+                        subtext={project.subtext}
                     />
                 ))} 
             </div>

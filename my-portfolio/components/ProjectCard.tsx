@@ -17,7 +17,6 @@ import LinkedinIcon from "./icon/LinkedinIcon"
 import XIcon from "./icon/x";
 import { Separator } from "@/components/ui/separator"
 
-
 type ProjectCardProps = {
     projectName: string;
     projectDescription: string;
@@ -29,10 +28,8 @@ type ProjectCardProps = {
     websiteLink?: string;
     youtubeLink?: string;
     xlink?: string;
-    className?: string;
     subhead?: string;
     subtext?: string;
-    icon?: string;
 };
 
 export function ProjectCard({
@@ -46,18 +43,15 @@ export function ProjectCard({
     websiteLink,
     youtubeLink,
     xlink,
-    className,
     subhead,
     subtext,
-    icon
 }: ProjectCardProps) {
     return (
-        <Card className={cn("w-[380px]", className)}>
+        <Card className={cn("w-[380px] shadow-md")}>
 
-            <CardHeader>
+            <CardHeader className="gap-2">
                 <CardTitle>{projectName}</CardTitle>
                 <CardDescription>{projectDescription}</CardDescription>
-                <Separator />
                 <Image src={projectImage} quality={100} width={imagewidth} height={imageheight} alt={projectName} className="w-full h-auto mt-4 rounded-md" />
             </CardHeader>
 
@@ -99,8 +93,8 @@ export function ProjectCard({
                 )}
                 {xlink && (
                     <a href={xlink} target="_blank" rel="noopener noreferrer" className="">
-                    <XIcon />
-                </a> 
+                        <XIcon />
+                    </a>
                 )}
             </CardFooter>
         </Card>
