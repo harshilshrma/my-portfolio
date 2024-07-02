@@ -5,6 +5,7 @@ import { Inter as FontSans } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
 import Navbar from "@/components/Navbar";
+import { Toaster } from "@/components/ui/toaster"
 
 import { cn } from "@/lib/utils"
 const fontSans = FontSans({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         >
           <Navbar />
           {children}
+          <Toaster />
         </ThemeProvider>
         <Analytics />
       </body>
