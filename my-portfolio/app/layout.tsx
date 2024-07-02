@@ -16,7 +16,7 @@ const fontSans = FontSans({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "HarshilSharma | Portfolio",
+  title: "Harshil Sharma | Portfolio",
   description: "Harshil Sharma - Portfolio",
 };
 
