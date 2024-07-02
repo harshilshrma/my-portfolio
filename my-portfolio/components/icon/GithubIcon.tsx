@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react';
 
-const YouTubeIcon = () => {
+const GithubIcon = () => {
     const { theme } = useTheme();
     const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -15,4 +15,4 @@ const YouTubeIcon = () => {
 
 };
 
-export default YouTubeIcon;
+export default GithubIcon;
