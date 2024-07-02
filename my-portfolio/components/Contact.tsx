@@ -49,7 +49,7 @@ export default function ContactPage() {
         <div className="container mx-auto py-10">
             <h1 className="text-4xl font-bold mb-5 text-center">Contact Me</h1>
             <p className="text-center text-xl mb-10">
-                Want to work with me? Feel free to reach out through the contact form, and let's get some <s>shit</s> done.
+                Want to work with me? Feel free to reach out through the contact form, and let&apos;s get some <s>shit</s> done.
             </p>
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-foreground p-8 rounded-lg shadow-md">
