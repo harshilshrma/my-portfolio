@@ -35,4 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+/app/api/sendEmail/route.js 
+
 /api/contact.js
