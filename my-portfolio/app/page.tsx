@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import Clients from "@/components/Clients";
 import Skills from "@/components/Skills";
 import Projects from '@/components/Projects';
-import Recommendations from '@/components/Recommendations';
+// import Recommendations from '@/components/Recommendations';
 import ContactPage from '@/components/Contact';
 import { Separator } from "@/components/ui/separator";
 
@@ -28,9 +28,9 @@ export default function Home(): JSX.Element {
         <Projects />
       </section>
 
-      <section id="recs">
+      {/* <section id="recs">
         <Recommendations />
-      </section>
+      </section> */}
 
       <section id="contact">
         <ContactPage />

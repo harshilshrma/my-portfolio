@@ -61,8 +61,9 @@ export default function ContactPage() {
                 });
             } else {
                 toast({
-                    title: "Failed to Send Message",
-                    description: "There was a problem sending your message.",
+                    // variant: "destructive",
+                    title: "Uh oh! Something went wrong.",
+                    description: "Send me a direct mail from your app instead!",
                     action: (
                         <ToastAction altText="Send email">
                             <a href="mailto:harshilsharma.dev@gmail.com">Send email</a>
@@ -167,7 +168,7 @@ export default function ContactPage() {
                                     placeholder="Lucas"
                                     name="firstName"
                                     value={formData.firstName}
-                                    // onChange={}
+                                // onChange={}
                                 />
                             </div>
                             <div>
@@ -199,7 +200,7 @@ export default function ContactPage() {
                         </div>
                         <div className="mb-4">
                             <label className="block font-medium text-sm mb-2">
-                                What are you interested in?
+                                Why are you sending this message?
                             </label>
                             <div className="flex space-x-4">
                                 <label className="inline-flex items-center">
@@ -208,9 +209,9 @@ export default function ContactPage() {
                                         className="form-radio"
                                         name="interest"
                                         value="design"
-                                        checked={formData.interest === "design"}
+
                                     />
-                                    <span className="text-sm ml-2"> Design</span>
+                                    <span className="text-sm ml-2">Work</span>
                                 </label>
                                 <label className="inline-flex items-center">
                                     <input
@@ -218,9 +219,9 @@ export default function ContactPage() {
                                         className="form-radio"
                                         name="interest"
                                         value="development"
-                                        checked={formData.interest === "development"}
+
                                     />
-                                    <span className="text-sm ml-2">Development</span>
+                                    <span className="text-sm ml-2">Something Random</span>
                                 </label>
                                 <label className="inline-flex items-center">
                                     <input
@@ -228,11 +229,11 @@ export default function ContactPage() {
                                         className="form-radio"
                                         name="interest"
                                         value="support"
-                                        checked={formData.interest === "support"}
+
                                     />
-                                    <span className="text-sm ml-2">Support</span>
+                                    <span className="text-sm ml-2">I just found you cool</span>
                                 </label>
-                                <label className="inline-flex items-center">
+                                {/* <label className="inline-flex items-center">
                                     <input
                                         type="radio"
                                         className="form-radio"
@@ -241,12 +242,12 @@ export default function ContactPage() {
                                         checked={formData.interest === "other"}
                                     />
                                     <span className="text-sm ml-2">Other</span>
-                                </label>
+                                </label> */}
                             </div>
                         </div>
                         <div className="mb-4">
                             <label className="block font-medium text-sm mb-2" htmlFor="message">
-                                Message
+                                Your Message
                             </label>
                             <textarea
                                 className="w-full px-3 py-2 border rounded-md"
@@ -257,7 +258,7 @@ export default function ContactPage() {
                                 rows={5}
                             />
                         </div>
-                        <Button type="submit">Submit</Button>
+                        <Button type="submit">Send Message</Button>
                     </form>
                 </div>
             </div>
