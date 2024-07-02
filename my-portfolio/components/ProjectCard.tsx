@@ -15,7 +15,9 @@ import YouTubeIcon from "./icon/YoutubeIcon"
 import GithubIcon from "./icon/GithubIcon"
 import LinkedinIcon from "./icon/LinkedinIcon"
 import XIcon from "./icon/x";
-import { Separator } from "@/components/ui/separator"
+
+import React, { useState, useEffect } from "react";
+import { useTheme } from 'next-themes';
 
 type ProjectCardProps = {
     projectName: string;
@@ -46,7 +48,15 @@ export function ProjectCard({
     subhead,
     subtext,
 }: ProjectCardProps) {
+    const { theme } = useTheme();
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        setIsDarkMode(theme === 'dark');
+    }, [theme]);
+
     return (
+
         <Card className={cn("w-[380px] shadow-md")}>
 
             <CardHeader className="gap-2">
@@ -66,7 +76,7 @@ export function ProjectCard({
                             {subtext}
                         </p>
                     </div>
-                    {/* <Switch /> */}
+                    <Switch />
                 </div>
             </CardContent>
 
@@ -78,22 +88,22 @@ export function ProjectCard({
                 )}
                 {githubLink && (
                     <a href={githubLink} target="_blank" rel="noopener noreferrer" className="">
-                        <GithubIcon />
+                        <GithubIcon sizeh="h-6" sizew="w-6" variant={isDarkMode ? 'light' : 'dark'} />
                     </a>
                 )}
                 {linkedinLink && (
                     <a href={linkedinLink} target="_blank" rel="noopener noreferrer" className="">
-                        <LinkedinIcon />
+                        <LinkedinIcon sizeh="h-6" sizew="w-6" />
                     </a>
                 )}
                 {youtubeLink && (
                     <a href={youtubeLink} target="_blank" rel="noopener noreferrer" className="">
-                        <YouTubeIcon />
+                        <YouTubeIcon sizeh="h-6" sizew="w-6" />
                     </a>
                 )}
                 {xlink && (
                     <a href={xlink} target="_blank" rel="noopener noreferrer" className="">
-                        <XIcon />
+                        <XIcon sizeh="h-6" sizew="w-6" variant={isDarkMode ? 'light' : 'dark'}/>
                     </a>
                 )}
             </CardFooter>

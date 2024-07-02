@@ -1,14 +1,27 @@
 // contact.tsx
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { Phone, Mail } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import YouTubeIcon from "./icon/YoutubeIcon"
+import GithubIcon from "./icon/GithubIcon"
+import LinkedinIcon from "./icon/LinkedinIcon"
+import XIcon from "./icon/x";
 
 export default function ContactPage() {
+    const { theme } = useTheme();
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        setIsDarkMode(theme === 'dark');
+    }, [theme]);
+
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        interest: '',
-        message: '',
+        firstName: "",
+        lastName: "",
+        email: "",
+        interest: "",
+        message: "",
     });
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -16,10 +29,10 @@ export default function ContactPage() {
         event.preventDefault();
 
         try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
+            const response = await fetch("/api/sendEmail.js", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify(formData),
             });
@@ -35,15 +48,15 @@ export default function ContactPage() {
         }
     };
 
-    const handleChange = (event: React.FormEvent<HTMLFormElement>) => {
+    // const handleChange = (event: React.FormEvent<HTMLFormElement>) => {
 
-        const target = event.target as HTMLInputElement;
-        const { name, value } = target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
-    };
+    //     const target = event.target as HTMLInputElement;
+    //     const { name, value } = target;
+    //     setFormData((prevData) => ({
+    //         ...prevData,
+    //         [name]: value,
+    //     }));
+    // };
 
     return (
         <div className="container mx-auto py-10">
@@ -51,21 +64,37 @@ export default function ContactPage() {
             <p className="text-center text-xl mb-10">
                 Want to work with me? Feel free to reach out through the contact form, and let&apos;s get some <s>shit</s> done.
             </p>
-            <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-foreground p-8 rounded-lg shadow-md">
-                    <h2 className="text-background text-2xl font-bold mb-4">Contact Information</h2>
-                    <p className="text-background mb-4">Fill up the form and I will get back to you within 24 hours.</p>
-                    <p className="text-background mb-2"><i className="fas fa-phone-alt"></i> +91 78519 22204</p>
-                    <p className="text-background mb-2"><i className="fas fa-envelope"></i> harshilsharma.dev@gmail.com</p>
-                    <div className="flex space-x-4">
-                        <a href="#" className=""><i className="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" className=""><i className="fab fa-linkedin fa-lg"></i></a>
-                        <a href="#" className=""><i className="fab fa-dribbble fa-lg"></i></a>
-                        <a href="#" className=""><i className="fab fa-facebook fa-lg"></i></a>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-foreground p-8 rounded-lg shadow-md flex flex-col justify-around">
+                    <div>
+                        <h2 className="text-background text-2xl font-bold mb-4">Contact Information</h2>
+                        <p className="text-background mb-4">Fill up the form and I will get back to you within 24 hours.</p>
+                        <div className="flex items-center space-x-4 mb-4">
+                            <Phone fill={isDarkMode ? "black" : "white"} className="h-6 w-6" />
+                            <p className="text-background">+91 78519 22204</p>
+                        </div>
+                        <div className="flex items-center space-x-4 mb-4">
+                            <Mail fill={isDarkMode ? "black" : "white"} className="h-6 w-6" />
+                            <p className="text-background">harshilsharma.dev@gmail.com</p>
+                        </div>
+                    </div>
+                    <div className="flex justify-around space-x-4">
+                        <a href={"https://github.com/harshilshrma"} target="_blank" rel="noopener noreferrer" className="">
+                            <GithubIcon sizeh={"h-10"} sizew={"w-10"} variant={isDarkMode ? 'dark' : 'light'} />
+                        </a>
+                        <a href={"https://www.linkedin.com/in/harshilshrma/"} target="_blank" rel="noopener noreferrer" className="">
+                            <LinkedinIcon sizeh="h-10" sizew="w-10" />
+                        </a>
+                        <a href={"https://twtr.openinapp.co/main"} target="_blank" rel="noopener noreferrer" className="">
+                            <XIcon sizeh={"h-10"} sizew={"w-10"} variant={isDarkMode ? 'dark' : 'light'} />
+                        </a>
+                        <a href={"https://yt.openinapp.co/meowcodes"} target="_blank" rel="noopener noreferrer" className="">
+                            <YouTubeIcon sizeh={"h-10"} sizew={"w-10"}/>
+                        </a>
                     </div>
                 </div>
                 <div className="bg-background p-8 rounded-lg shadow-md">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} method="POST">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label className="block font-medium text-sm mb-2" htmlFor="first-name">
@@ -76,6 +105,7 @@ export default function ContactPage() {
                                     id="first-name"
                                     type="text"
                                     placeholder="Lucas"
+                                    name="firstName"
                                 />
                             </div>
                             <div>
@@ -144,5 +174,5 @@ export default function ContactPage() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

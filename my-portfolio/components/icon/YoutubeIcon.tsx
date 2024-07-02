@@ -1,14 +1,11 @@
 import React from 'react';
 
-const YouTubeIcon = () => {
-    // // in case of rendering black and white images
-    // const { theme } = useTheme();
-    // const [isDarkMode, setIsDarkMode] = useState(false);
-    
-    // useEffect(() => {
-    //     setIsDarkMode(theme === 'dark');
-    // }, [theme]);
+interface YouTubeIconProps {
+    sizeh: string;
+    sizew: string;
+}
 
+const YouTubeIcon: React.FC<YouTubeIconProps> = ({sizeh, sizew}) => {
     const fillColor = '#FF0000';
 
     return (
@@ -16,7 +13,7 @@ const YouTubeIcon = () => {
             role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className={`${sizeh} ${sizew}`}
             fill={fillColor}
         >
             <title>YouTube</title>
