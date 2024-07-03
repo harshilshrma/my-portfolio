@@ -22,7 +22,10 @@ export default function Projects() {
 
     return (
         <section className="my-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">My Projects</h2>
+            <h1 className="text-3xl md:text-4xl font-bold text-center mb-5">My Projects</h1>
+            <p className="text-center text-base md:text-xl mb-10">
+                Here are some of the projects that
+            </p>
             <div className="grid grid-cols-3 gap-4">
                 {projects.map((project, index) => (
                     <ProjectCard

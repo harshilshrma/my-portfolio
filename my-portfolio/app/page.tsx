@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Projects from '@/components/Projects';
 import Recommendations from '@/components/Recommendations';
 import ContactPage from '@/components/Contact';
+import Resume from '@/components/Resume';
 import { Separator } from "@/components/ui/separator";
 
 export default function Home(): JSX.Element {
@@ -22,6 +23,10 @@ export default function Home(): JSX.Element {
 
       <section id="skills">
         <Skills />
+      </section>
+
+      <section id="skills">
+        <Resume />
       </section>
 
       <section id="projects">
