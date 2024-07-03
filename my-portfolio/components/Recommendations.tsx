@@ -72,7 +72,7 @@
 
 //     return (
 //         <div className="container mx-auto py-10">
-//             <h1 className="text-4xl font-bold mb-5 text-center">Recommendations</h1>
+//             <h1 className="text-3xl md:text-4xl font-bold mb-5 text-center">Recommendations</h1>
 //             <EmblaCarousel slides={recommendations.map((rec) => rec.id)}>
 //                 <CarouselContent className="-ml-4">
 //                     {recommendations.map((recommendation) => (
