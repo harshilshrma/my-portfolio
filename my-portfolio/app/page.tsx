@@ -28,9 +28,9 @@ export default function Home(): JSX.Element {
         <Projects />
       </section>
 
-      {/* <section id="recs">
-        <Recommendations />
-      </section> */}
+      <section id="recs">
+        {/* <Recommendations /> */}
+      </section>
 
       <section id="contact">
         <ContactPage />
