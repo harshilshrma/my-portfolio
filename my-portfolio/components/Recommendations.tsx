@@ -1,7 +1,8 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export default function Recommendations() {
     const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
@@ -10,20 +11,29 @@ export default function Recommendations() {
     const recommendations = [
         {
             id: 1,
-            name: "John Doe",
-            designation: "Software Engineer",
-            company: "Tech Solutions Inc.",
-            position: "",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero vitae magna.",
-            image: ' '
+            name: "Priyam Raj",
+            company: "TubeMagic LLC, Miami, Florida (USA)",
+            position: "CTO, Founder",
+            text: "Lorem ipsum dolor sit amet, consectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur adipiscing elit. Nulla convallis libero vitae magna.",
+            image: '/1.png'
         },
         {
             id: 2,
             name: "Jane Smith",
-            designation: "Product Manager",
             company: "Innovative Tech Ltd.",
-            text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            position: "Product Manager",
+            text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+            image: '/jane_smith.png'
         },
+        {
+            id: 2,
+            name: "Jane Smith",
+            company: "Innovative Tech Ltd.",
+            position: "Product Manager",
+            text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+            image: '/jane_smith.png'
+        },
+        
         // Add more recommendations as needed
     ];
 
@@ -31,7 +41,7 @@ export default function Recommendations() {
         <div className="container mx-auto py-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-5 text-center">Recommendations</h1>
             <p className="text-center text-base md:text-xl mb-10">
-                Have a look at what my recruiters / people i have worked with have to say about me.
+                Have a look at these heartfelt recommendations from the fantastic individuals I&apos;ve had the joy of working alongside!
             </p>
             <Carousel
                 plugins={[plugin.current]}
@@ -43,17 +53,19 @@ export default function Recommendations() {
                     {recommendations.map((recommendation, index) => (
                         <CarouselItem key={index} className="pl-4">
                             <div className="p-1">
-                                <Card className="flex items-center">
-                                    {/* Image on the right */}
-                                    <div className="flex-shrink-0 h-20 w-20 rounded-full overflow-hidden">
-                                        <img className="h-full w-full object-cover" src={`images/${recommendation.id}.jpg`} alt={`${recommendation.name}`} />
+                                <Card className={cn("shadow-md flex flex-row items-center")}>
+                                    <div className="flex-shrink-0 h-16 w-16 md:h-32 md:w-32 rounded-full overflow-hidden m-4">
+                                        <img className="h-full w-full object-cover" src={recommendation.image} alt={`${recommendation.name}`} />
                                     </div>
-                                    {/* Text on the left */}
-                                    <CardContent className="ml-4 flex-grow">
-                                        <h2 className="text-lg font-semibold">{recommendation.name}</h2>
-                                        <p className="text-sm text-gray-500">{recommendation.position} at {recommendation.company}</p>
-                                        <p className="text-sm mt-2">{recommendation.text}</p>
-                                    </CardContent>
+                                    <div className="flex flex-col ml-2">
+                                        <CardHeader className="pt-4 pl-4 pr-4 pb-0">
+                                            <CardTitle>{recommendation.name}</CardTitle>
+                                            <CardDescription className="text-base">{recommendation.position} at {recommendation.company}</CardDescription>
+                                        </CardHeader>
+                                        <CardContent className="pt-2 pl-4 pr-4 pb-4 flex-grow">
+                                            <p className="text-base mt-2">{recommendation.text}</p>
+                                        </CardContent>
+                                    </div>
                                 </Card>
                             </div>
                         </CarouselItem>
