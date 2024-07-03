@@ -19,11 +19,11 @@ export default function Recommendations() {
         },
         {
             id: 2,
-            name: "Jane Smith",
+            name: "Harsh Govind",
             company: "Innovative Tech Ltd.",
             position: "Product Manager",
             text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-            image: '/jane_smith.png'
+            image: '/2.png'
         },
         {
             id: 2,
