@@ -96,10 +96,10 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-foreground p-8 rounded-lg shadow-md flex flex-col justify-around">
                     <div>
-                        <h2 className="text-background text-xl md:text-2xl font-bold mb-4">
+                        <h2 className="text-background text-2xl md:text-3xl font-bold mb-4">
                             Contact Information
                         </h2>
-                        <p className="text-background text-sm md:text-base mb-4">
+                        <p className="text-background text-sm md:text-   mb-4">
                             Fill up the form and I will get back to you within 24 hours.
                         </p>
                         <div className="flex items-center space-x-4 mb-4">
@@ -119,8 +119,8 @@ export default function ContactPage() {
                             className=""
                         >
                             <GithubIcon
-                                sizeh={"h-10"}
-                                sizew={"w-10"}
+                                sizeh={"h-12"}
+                                sizew={"w-12"}
                                 variant={isDarkMode ? "dark" : "light"}
                             />
                         </a>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                             rel="noopener noreferrer"
                             className=""
                         >
-                            <LinkedinIcon sizeh="h-10" sizew="w-10" />
+                            <LinkedinIcon sizeh="h-12" sizew="w-12" />
                         </a>
                         <a
                             href={"https://twtr.openinapp.co/main"}
@@ -139,8 +139,8 @@ export default function ContactPage() {
                             className=""
                         >
                             <XIcon
-                                sizeh={"h-10"}
-                                sizew={"w-10"}
+                                sizeh={"h-12"}
+                                sizew={"w-12"}
                                 variant={isDarkMode ? "dark" : "light"}
                             />
                         </a>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                             rel="noopener noreferrer"
                             className=""
                         >
-                            <YouTubeIcon sizeh={"h-10"} sizew={"w-10"} />
+                            <YouTubeIcon sizeh={"h-12"} sizew={"w-12"} />
                         </a>
                     </div>
                 </div>

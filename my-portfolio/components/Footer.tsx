@@ -28,7 +28,7 @@ const Footer = () => {
                         className="h-auto w-auto"
                     />
                     <div className="pl-2 text-center text-base">
-                        &#169; {currentYear} Harshil Sharma
+                        &#169; {currentYear} Harshil Sharma. All rights reserved.
                     </div>
                 </div>
             </div>
