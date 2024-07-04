@@ -9,10 +9,13 @@ import Recommendations from '@/components/Recommendations';
 import ContactPage from '@/components/Contact';
 import Resume from '@/components/Resume';
 import { Separator } from "@/components/ui/separator";
+import AlertText from "@/components/Alert";
 
 export default function Home(): JSX.Element {
   return (
     <div className="container mx-auto p-4">
+      <AlertText />
+
       <section id="hero">
         <Hero />
       </section>

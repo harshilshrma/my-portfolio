@@ -14,7 +14,7 @@ export default function Recommendations() {
             name: "Priyam Raj",
             company: "TubeMagic LLC, Miami, Florida (USA)",
             position: "CTO, Founder",
-            text: "Lorem ipsum dolor sit amet, consectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur aconsectetur adipiscing elit. Nulla convallis libero vitae magna.",
+            text: "Harshil is a quick learner and chronically adapts to anything new that is assigned to him, which is a huge plus for the industry. I also like his unique and fun way of documenting his work. I can easily see that he has good potential ahead.",
             image: '/1.png'
         },
         {
