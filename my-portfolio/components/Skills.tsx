@@ -34,8 +34,6 @@ export default function Skills() {
     const plugin = React.useRef(Autoplay({ delay: 1500, stopOnInteraction: true }));
     const [api, setApi] = React.useState<CarouselApi>()
 
-
-
     return (
         <div className="container mx-auto py-10 px-4">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-5">I&apos;ve worked with</h1>

@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Linkedin } from 'lucide-react';
 
 export default function Recommendations() {
     const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
@@ -59,7 +60,11 @@ export default function Recommendations() {
                                         </CardHeader>
                                         <CardContent className="pt-2 pl-4 pr-4 pb-4 flex-grow">
                                             <p className="text-base mt-2">{recommendation.text}</p>
-                                        </CardContent>
+                                        </CardContent >
+                                        <div className="flex">
+                                            <p className="pl-4 pb-4 pr-2 pb-0 text-muted-foreground text-base">as seen on</p>
+                                            <Linkedin href="https://www.linkedin.com/in/harshilshrma/" className="text-muted-foreground h-5 w-5"/>
+                                        </div>
                                     </div>
                                 </Card>
                             </div>

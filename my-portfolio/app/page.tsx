@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
         <Hero />
       </section>
 
-      <section id="about">
+      <section id="experiences">
         <Clients />
       </section>
 
@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
         <Skills />
       </section>
 
-      <section id="skills">
+      <section id="resume">
         <Resume />
       </section>
 

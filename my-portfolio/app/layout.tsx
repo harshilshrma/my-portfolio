@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster"
 import Footer from "@/components/Footer";
+import BackToTopButton from "@/components/BackToTopButton";
 
 import { cn } from "@/lib/utils"
 const fontSans = FontSans({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           {children}
           <Footer />
           <Toaster />
+          <BackToTopButton />
         </ThemeProvider>
         <Analytics />
       </body>

@@ -1,6 +1,6 @@
 // contact.tsx
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Phone, Mail } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import YouTubeIcon from "./icon/YoutubeIcon"
@@ -11,11 +11,22 @@ import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button"
 import { ToastAction } from "@/components/ui/toast"
 
-
 export default function ContactPage() {
     const { theme } = useTheme();
     const [isDarkMode, setIsDarkMode] = useState(false);
     const { toast } = useToast();
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    useEffect(() => {
+        const audio = new Audio('/error.mp3');
+        audioRef.current = audio;
+    }, []);
+
+    const playSound = () => {
+        if (audioRef.current) {
+            audioRef.current.play();
+        }
+    }
 
     useEffect(() => {
         setIsDarkMode(theme === 'dark');
@@ -29,14 +40,23 @@ export default function ContactPage() {
         message: "",
     });
 
-    // const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    //     const target = event.target;
-    //     const { name, value } = target;
-    //     setFormData((prevData) => ({
-    //         ...prevData,
-    //         [name]: value,
-    //     }));
-    // };
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const target = event.target;
+        const { name, value } = target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleChangeTextarea = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const target = event.target;
+        const { name, value } = target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
@@ -60,6 +80,7 @@ export default function ContactPage() {
                     description: "Your message has been sent successfully!",
                 });
             } else {
+                playSound();
                 toast({
                     // variant: "destructive",
                     title: "Uh oh! Something went wrong.",
@@ -73,6 +94,7 @@ export default function ContactPage() {
             }
         } catch (error) {
             console.error("Error sending message:", error);
+            playSound();
             toast({
                 title: "Uh oh! Something went wrong.",
                 description: "There was a problem with your request. Try sending me a mail via this button.",
@@ -96,19 +118,19 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-foreground p-8 rounded-lg shadow-md flex flex-col justify-around">
                     <div>
-                        <h2 className="text-background text-2xl md:text-3xl font-bold mb-4">
+                        <h2 className="text-background text-2xl md:text-3xl font-bold mb-2">
                             Contact Information
                         </h2>
-                        <p className="text-background text-sm md:text-   mb-4">
+                        <p className="text-background text-sm md:text-lg mb-4">
                             Fill up the form and I will get back to you within 24 hours.
                         </p>
-                        <div className="flex items-center space-x-4 mb-4">
+                        <div className="flex items-center space-x-4 mb-4 pt-4">
                             <Phone fill={isDarkMode ? "black" : "white"} className="h-6 w-6" />
-                            <p className="text-background text-sm md:text-base">+91 78519 22204</p>
+                            <p className="text-background text-sm md:text-lg">+91 78519 22204</p>
                         </div>
                         <div className="flex items-center space-x-4 mb-4">
                             <Mail fill={isDarkMode ? "black" : "white"} className="h-6 w-6" />
-                            <p className="text-background text-sm md:text-base">harshilsharma.dev@gmail.com</p>
+                            <p className="text-background text-sm md:text-lg">harshilsharma.dev@gmail.com</p>
                         </div>
                     </div>
                     <div className="flex justify-around space-x-4">
@@ -168,7 +190,8 @@ export default function ContactPage() {
                                     placeholder="Lucas"
                                     name="firstName"
                                     value={formData.firstName}
-                                // onChange={}
+                                    required
+                                    onChange={handleChange}
                                 />
                             </div>
                             <div>
@@ -182,6 +205,8 @@ export default function ContactPage() {
                                     placeholder="Jones"
                                     name="lastName"
                                     value={formData.lastName}
+                                    required
+                                    onChange={handleChange}
                                 />
                             </div>
                         </div>
@@ -196,6 +221,8 @@ export default function ContactPage() {
                                 placeholder="lucas@mail.com"
                                 name="email"
                                 value={formData.email}
+                                required
+                                onChange={handleChange}
                             />
                         </div>
                         <div className="mb-4">
@@ -246,6 +273,7 @@ export default function ContactPage() {
                                 name="message"
                                 value={formData.message}
                                 rows={5}
+                                onChange={handleChangeTextarea}
                             />
                         </div>
                         <Button type="submit">Send Message</Button>
