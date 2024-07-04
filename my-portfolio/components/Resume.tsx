@@ -21,7 +21,7 @@ export default function Resume() {
             title: 'How was my resume?',
             description: 'I hope you liked it.'
         })
-        window.open('/HarshilSharma_resume.pdf', '_blank');
+        window.open('/HarshilSharma_Resume.pdf', '_blank');
     }
 
     const handleDownloadResume = () => {
@@ -30,8 +30,8 @@ export default function Resume() {
             description: 'Hold tight. Your download will begin shortly.'
         });
         const link = document.createElement('a');
-        link.href = '/HarshilSharma_resume.pdf';
-        link.download = 'HarshilSharma_resume.pdf';
+        link.href = '/HarshilSharma_Resume.pdf';
+        link.download = 'HarshilSharma_Resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

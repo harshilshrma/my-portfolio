@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AlertCircle } from "lucide-react";
+import { Frown } from "lucide-react";
 import {
     Alert,
     AlertDescription,
@@ -10,7 +10,7 @@ export default function AlertText() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     const checkScreenSize = () => {
-        setIsSmallScreen(window.innerWidth < 1024); 
+        setIsSmallScreen(window.innerWidth < 1024);
     };
 
     useEffect(() => {
@@ -23,10 +23,10 @@ export default function AlertText() {
         <>
             {isSmallScreen && (
                 <Alert variant="destructive">
-                    <AlertCircle className="h-4 w-4" />
-                    <AlertTitle>Error</AlertTitle>
+                    <Frown className="h-4 w-4" />
+                    <AlertTitle>Uh-oh! This site isn't optimized for smaller screens yet. </AlertTitle>
                     <AlertDescription>
-                        Your session has expired. Please log in again.
+                    Please switch to a desktop or laptop for now. Optimization coming soon!
                     </AlertDescription>
                 </Alert>
             )}
