@@ -20,21 +20,11 @@ export default function Recommendations() {
         {
             id: 2,
             name: "Harsh Govind",
-            company: "Innovative Tech Ltd.",
-            position: "Product Manager",
-            text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+            company: "TubeMagic LLC, Miami, Florida (USA)",
+            position: "Software Engineer",
+            text: "I had the pleasure of working with Harshil, and he is one of the most hardworking individuals I've encountered. In just a few days, Harshil quickly grasped new concepts and implemented them efficiently, showcasing his ability to learn and adapt swiftly. Harshil has a proactive approach, often diving straight into finding solutions, which reflects his determination and focus on getting results. His dedication and rapid problem-solving skills make him a valuable asset to any team.",
             image: '/2.png'
-        },
-        {
-            id: 2,
-            name: "Jane Smith",
-            company: "Innovative Tech Ltd.",
-            position: "Product Manager",
-            text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-            image: '/jane_smith.png'
-        },
-        
-        // Add more recommendations as needed
+        }
     ];
 
     return (
@@ -43,6 +33,11 @@ export default function Recommendations() {
             <p className="text-center text-base md:text-xl mb-10">
                 Have a look at these heartfelt recommendations from the fantastic individuals I&apos;ve had the joy of working alongside!
             </p>
+            <div className="text-center">
+                <span className="text-sm font-semibold">
+                    Total Slides: {recommendations.length}
+                </span>
+            </div>
             <Carousel
                 plugins={[plugin.current]}
                 className="w-full max-w-screen-lg mx-auto"
