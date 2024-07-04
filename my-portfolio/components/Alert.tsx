@@ -24,7 +24,7 @@ export default function AlertText() {
             {isSmallScreen && (
                 <Alert variant="destructive">
                     <Frown className="h-4 w-4" />
-                    <AlertTitle>Uh-oh! This site isn't optimized for smaller screens yet. </AlertTitle>
+                    <AlertTitle>Uh-oh! This site isn&apos;t optimized for smaller screens yet. </AlertTitle>
                     <AlertDescription>
                     Please switch to a desktop or laptop for now. Optimization coming soon!
                     </AlertDescription>

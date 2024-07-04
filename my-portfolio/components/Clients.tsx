@@ -20,7 +20,7 @@ export default function Clients() {
                 <Image
                     src={isDarkMode ? "/tubemagic.png" : "/tm.png"}
                     alt="tubemagic"
-                    width={200}
+                    width={250}
                     height={100}
                 />
                 <div className="text-lg">... and maybe with you  next?</div>
