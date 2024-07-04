@@ -57,7 +57,7 @@ export function ProjectCard({
 
     return (
 
-        <Card className={cn("w-[380px] shadow-md")}>
+        <Card className={cn("w-full md:w-[380px] shadow-md")}>
 
             <CardHeader className="gap-2">
                 <CardTitle>{projectName}</CardTitle>

@@ -1,10 +1,8 @@
-"use client"
-
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react";
 import { MoveRight, Download, NotebookPen } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useToast } from "@/components/ui/use-toast";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ToastAction } from "@/components/ui/toast";
 
@@ -54,44 +52,48 @@ export default function Resume() {
 
     return (
         <div className="container mx-auto py-10 px-4">
-            <div className="grid h-[400px] grid-cols-1 md:grid-cols-2 gap-8">
-                {/* grid 1 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Grid 1 */}
                 <div className="bg-secondary p-8 rounded-lg shadow-md flex flex-col justify-around">
-                    <div>
-                        <h1 className="text-3xl md:text-4xl font-bold text-left mb-5">My Resume</h1>
-                        <p className="text-sm md:text-lg mb-4">
-                            Highly skilled, organized and creative Web Developer with experience in crafting functionally robust websites and web applications.
-                        </p>
-                        <p className="text-sm md:text-lg mb-4">
-                            Have a look at my resume or download it.
-                        </p>
+                    <h1 className="text-3xl md:text-4xl font-bold text-left">My Resume</h1>
+                    <p className="text-base md:text-lg">
+                        Highly skilled, organized and creative Web Developer with experience in crafting functionally robust websites and web applications.
+                    </p>
+                    <p className="text-base md:text-lg">
+                        Have a look at my resume or download it.
+                    </p>
 
-                        <div className="flex flex-col md:flex-row items-center grid-cols-1 md:grid-cols-2 pt-6 space-x-4 mb-4">
-                            <Button type="submit" onClick={handleViewResume} className="shadow-md">
-                                View Resume &nbsp;<MoveRight className="mr-2 h-4 w-4" />
-                            </Button>
-                            <Button type="submit" onClick={handleDownloadResume} className="shadow-md">
-                                Download Resume &nbsp;<Download className="mr-2 h-4 w-4" />
-                            </Button>
-                        </div>
+                    <div className="flex flex-col md:flex-row items-center grid-cols-1 md:grid-cols-2 space-x-4 mb-4">
+                        <Button type="submit" onClick={handleViewResume} className="shadow-md">
+                            View Resume &nbsp;<MoveRight className="mr-2 h-4 w-4" />
+                        </Button>
+                        <Button type="submit" onClick={handleDownloadResume} className="shadow-md">
+                            Download Resume &nbsp;<Download className="mr-2 h-4 w-4" />
+                        </Button>
                     </div>
                 </div>
 
                 {/* Grid 2 */}
-                <div className="bg-background p-8 rounded-lg shadow-md flex flex-col justify-around">
-                    <div className="flex flex-col justify-around space-y-4">
+                <div className="bg-background p-8 rounded-lg shadow-md">
+                    <div className="space-y-4">
                         <h1 className="text-3xl md:text-4xl font-bold text-left mb-1">Profile Overview</h1>
-                        <div className="flex items-center flex-grow space-x-4 ">
-                            <NotebookPen width={58} height={58} />
-                            <p className="text-sm md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
+                        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-4">
+                            <div className="w-16 h-16 md:w-20 md:h-20 relative">
+                                <NotebookPen width={58} height={58} />
+                            </div>
+                            <p className="text-base md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
                         </div>
-                        <div className="flex items-center flex-grow space-x-4 ">
-                            <NotebookPen width={58} height={58} />
-                            <p className="text-sm md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
+                        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-4">
+                            <div className="w-16 h-16 md:w-20 md:h-20 relative">
+                                <NotebookPen width={58} height={58} />
+                            </div>
+                            <p className="text-base md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
                         </div>
-                        <div className="flex items-center flex-grow space-x-4 ">
-                            <NotebookPen width={58} height={58} />
-                            <p className="text-sm md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
+                        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-4">
+                            <div className="w-16 h-16 md:w-20 md:h-20 relative">
+                                <NotebookPen width={58} height={58} />
+                            </div>
+                            <p className="text-base md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ export default function AlertText() {
                     <AlertDescription>
                         1. Switch to a desktop or laptop for the <strong>best</strong> experience.
                         <br />
-                        2. Tap the 3 dots in the top right corner, select "Desktop site", and zoom out for a better view.
+                        2. Tap the 3 dots in the top right corner, select &quot;Desktop site&quot;, and zoom out for a better view.
                     </AlertDescription>
                 </Alert>
             )}
