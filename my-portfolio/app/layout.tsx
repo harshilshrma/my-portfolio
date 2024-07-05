@@ -27,9 +27,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>
+        "min-h-screen bg-background font-sans antialiased",
+        fontSans.variable
+      )}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -41,8 +41,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
           <Toaster />
           <BackToTopButton />
-          <SpeedInsights/>
         </ThemeProvider>
+        <SpeedInsights />
         <Analytics />
       </body>
     </html>
