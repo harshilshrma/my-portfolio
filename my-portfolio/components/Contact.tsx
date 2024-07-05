@@ -111,7 +111,7 @@ export default function ContactPage() {
     return (
         <div className="container mx-auto py-10 px-4">
             <h1 className="text-3xl md:text-4xl font-bold mb-5 text-center">Contact Me</h1>
-            <p className="text-center text-base md:text-xl mb-10">
+            <p className="text-center text-lg md:text-xl mb-10">
                 Want to work with me? Feel free to reach out through the contact form,
                 and let&apos;s get some <s>shit</s> done.
             </p>

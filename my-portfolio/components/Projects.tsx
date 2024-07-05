@@ -23,7 +23,7 @@ export default function Projects() {
     return (
         <section className="my-8">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-5">My Projects</h1>
-            <p className="text-center text-base md:text-xl mb-10">
+            <p className="text-center text-lg md:text-xl mb-10">
             Check out these cool projects I&apos;ve created!
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

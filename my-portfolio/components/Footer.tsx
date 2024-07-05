@@ -30,7 +30,7 @@ const Footer = () => {
                             className="h-auto w-auto"
                         />
                     </Link>
-                    <div className="pl-2 text-center text-base">
+                    <div className="pl-2 text-center md:text-base text-sm">
                         &#169; {currentYear} Harshil Sharma. All rights reserved.
                     </div>
                 </div>

@@ -31,7 +31,7 @@ export default function Recommendations() {
     return (
         <div className="container mx-auto py-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-5 text-center">Recommendations</h1>
-            <p className="text-center text-base md:text-xl mb-10">
+            <p className="text-center text-lg md:text-xl mb-10">
                 Have a look at these heartfelt recommendations from the fantastic individuals I&apos;ve had the joy of working alongside!
             </p>
             <div className="text-center">
@@ -49,13 +49,13 @@ export default function Recommendations() {
                     {recommendations.map((recommendation, index) => (
                         <CarouselItem key={index} className="pl-4">
                             <div className="p-1">
-                                <Card className={cn("shadow-md flex flex-row items-center")}>
-                                    <div className="flex-shrink-0 h-16 w-16 md:h-32 md:w-32 rounded-full overflow-hidden m-4">
+                                <Card className={cn("shadow-md flex md:flex-row flex-col items-center")}>
+                                    <div className="flex-shrink-0 h-24 w-24 md:h-32 md:w-32 rounded-full overflow-hidden m-4">
                                         <img className="h-full w-full object-cover" src={recommendation.image} alt={`${recommendation.name}`} />
                                     </div>
                                     <div className="flex flex-col ml-2">
                                         <CardHeader className="pt-4 pl-4 pr-4 pb-0">
-                                            <CardTitle>{recommendation.name}</CardTitle>
+                                            <CardTitle className="">{recommendation.name}</CardTitle>
                                             <CardDescription className="text-base">{recommendation.position} at {recommendation.company}</CardDescription>
                                         </CardHeader>
                                         <CardContent className="pt-2 pl-4 pr-4 pb-4 flex-grow">

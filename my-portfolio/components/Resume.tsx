@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { MoveRight, Download, NotebookPen } from 'lucide-react';
+import { MoveRight, MoveUpRight, Download, NotebookPen, AppWindow, MousePointerClick } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ToastAction } from "@/components/ui/toast";
+import Link from "next/link";
 
 export default function Resume() {
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -63,11 +64,11 @@ export default function Resume() {
                         Have a look at my resume or download it.
                     </p>
 
-                    <div className="flex flex-col md:flex-row items-center grid-cols-1 md:grid-cols-2 md:space-x-4 space-y-2 mb-4">
-                        <Button type="submit" onClick={handleViewResume} className="shadow-md">
+                    <div className="flex flex-col md:flex-row items-center grid-cols-1 md:grid-cols-2 md:space-x-4 mb-4">
+                        <Button type="submit" onClick={handleViewResume} className="shadow-md mb-2">
                             View Resume &nbsp;<MoveRight className="mr-2 h-4 w-4" />
                         </Button>
-                        <Button type="submit" onClick={handleDownloadResume} className="shadow-md">
+                        <Button type="submit" onClick={handleDownloadResume} className="shadow-md mb-2">
                             Download Resume &nbsp;<Download className="mr-2 h-4 w-4" />
                         </Button>
                     </div>
@@ -77,23 +78,26 @@ export default function Resume() {
                 <div className="bg-background p-8 rounded-lg shadow-md">
                     <div className="space-y-4">
                         <h1 className="text-3xl md:text-4xl font-bold text-left mb-1">Profile Overview</h1>
-                        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-4">
-                            <div className="w-16 h-16 md:w-20 md:h-20 relative">
-                                <NotebookPen width={58} height={58} />
+                        <div className="flex items-center md:space-y-0 md:space-x-4">
+                            <div className="w-16 h-16 md:w-18 md:h-18 flex items-center">
+                                <NotebookPen width={48} height={48} />
                             </div>
-                            <p className="text-base md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
+                            <p className="text-sm md:text-lg pl-2">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
                         </div>
-                        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-4">
-                            <div className="w-16 h-16 md:w-20 md:h-20 relative">
-                                <NotebookPen width={58} height={58} />
+                        <div className="flex items-center md:space-y-0 md:space-x-4">
+                            <div className="w-16 h-16 md:w-18 md:h-18 flex items-center">
+                                <AppWindow width={48} height={48} />
                             </div>
-                            <p className="text-base md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
+                            <p className="text-sm md:text-lg text-left">Certified React Developer by <Link href="https://www.coursera.org/account/accomplishments/verify/HHU9YAVQ94VX" target="_blank" rel="noopener noreferrer" className="font-medium no-underline hover:underline">
+                                IBM
+                                <MoveUpRight width={16} height={16} className="inline-block ml-1 mb-1" />
+                            </Link></p>
                         </div>
-                        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-4">
-                            <div className="w-16 h-16 md:w-20 md:h-20 relative">
-                                <NotebookPen width={58} height={58} />
+                        <div className="flex items-center md:space-y-0 md:space-x-4">
+                            <div className="w-16 h-16 md:w-18 md:h-18 flex items-center">
+                                <MousePointerClick width={48} height={48} />
                             </div>
-                            <p className="text-base md:text-lg">B.Tech (Final Year) in Computer Science & Engineering from BIT Mesra</p>
+                            <p className="text-sm md:text-lg">2+ Years of Experience in Full-Stack Web Development</p>
                         </div>
                     </div>
                 </div>
