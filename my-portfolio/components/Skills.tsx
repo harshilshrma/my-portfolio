@@ -16,6 +16,7 @@ const skills = [
     { id: 13, name: "Vercel", category: "Deployment Platform", logo: "/vercel.svg" },
     { id: 7, name: "Tailwind CSS", category: "CSS Framework", logo: "/tailwindcss.svg" },
     { id: 6, name: "Node.js", category: "JavaScript Runtime", logo: "/nodedotjs.svg" },
+    { id: 14, name: "Prisma", category: "ORM (Object-relational mapping)", logo: "/prisma.svg" },
     { id: 8, name: "Supabase", category: "Backend as a Service", logo: "/supabase.svg" },
     { id: 9, name: "npm", category: "Package Manager", logo: "/npm.svg" },
     { id: 10, name: "Java", category: "Programming Language", logo: "/java.svg" },
