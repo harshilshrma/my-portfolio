@@ -36,7 +36,7 @@ export default function Skills() {
     const [api, setApi] = React.useState<CarouselApi>()
 
     return (
-        <div className="container mx-auto py-10 px-8">
+        <div className="container mx-auto py-10 px-6">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-5">I&apos;ve worked with</h1>
             <div className="text-center">
                 <span className="text-sm font-semibold">

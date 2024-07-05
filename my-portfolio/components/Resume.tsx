@@ -55,15 +55,15 @@ export default function Resume() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Grid 1 */}
                 <div className="bg-secondary p-8 rounded-lg shadow-md flex flex-col justify-around">
-                    <h1 className="text-3xl md:text-4xl font-bold text-left">My Resume</h1>
-                    <p className="text-base md:text-lg">
+                    <h1 className="text-3xl md:text-4xl font-bold text-left mb-4">My Resume</h1>
+                    <p className="text-base md:text-lg mb-2">
                         Highly skilled, organized and creative Web Developer with experience in crafting functionally robust websites and web applications.
                     </p>
-                    <p className="text-base md:text-lg">
+                    <p className="text-base md:text-lg mb-3">
                         Have a look at my resume or download it.
                     </p>
 
-                    <div className="flex flex-col md:flex-row items-center grid-cols-1 md:grid-cols-2 space-x-4 mb-4">
+                    <div className="flex flex-col md:flex-row items-center grid-cols-1 md:grid-cols-2 md:space-x-4 space-y-2 mb-4">
                         <Button type="submit" onClick={handleViewResume} className="shadow-md">
                             View Resume &nbsp;<MoveRight className="mr-2 h-4 w-4" />
                         </Button>
