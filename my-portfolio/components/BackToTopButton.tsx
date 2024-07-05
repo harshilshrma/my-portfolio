@@ -44,7 +44,7 @@ export default function BackToTopButton() {
             onClick={scrollToTop}
             type="submit"
         >
-            <div className="pl-2 flex justify-center text-background items-center">
+            <div className="pl-1 flex justify-center text-background items-center">
                 Back to top&nbsp;<ArrowUp size={20} />
             </div>
         </Button>
