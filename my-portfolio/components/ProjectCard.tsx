@@ -1,4 +1,4 @@
-import { TrainFront, Globe, Icon } from "lucide-react"
+import { Globe, CalendarDays } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import {
@@ -15,9 +15,9 @@ import YouTubeIcon from "./icon/YoutubeIcon"
 import GithubIcon from "./icon/GithubIcon"
 import LinkedinIcon from "./icon/LinkedinIcon"
 import XIcon from "./icon/x";
-
 import React, { useState, useEffect } from "react";
 import { useTheme } from 'next-themes';
+import ProjectTechIcons from "./ProjectTechIcons";
 
 type ProjectCardProps = {
     projectName: string;
@@ -32,6 +32,8 @@ type ProjectCardProps = {
     xlink?: string;
     subhead?: string;
     subtext?: string;
+    techs?: string[];
+    date?: string;
 };
 
 export function ProjectCard({
@@ -47,6 +49,8 @@ export function ProjectCard({
     xlink,
     subhead,
     subtext,
+    techs,
+    date,
 }: ProjectCardProps) {
     const { theme } = useTheme();
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -58,8 +62,13 @@ export function ProjectCard({
     return (
 
         <Card className={cn("w-full md:w-[380px] shadow-md")}>
-
             <CardHeader className="gap-2">
+                <div className="flex items-center pt-2">
+                    <CalendarDays className="mr-2 h-4 w-4 opacity-70" />{" "}
+                    <span className="text-xs text-muted-foreground">
+                        Completed on {date}
+                    </span>
+                </div>
                 <CardTitle>{projectName}</CardTitle>
                 <CardDescription>{projectDescription}</CardDescription>
                 <Image src={projectImage} quality={100} width={imagewidth} height={imageheight} alt={projectName} className="w-full h-auto mt-4 rounded-md" />
@@ -75,34 +84,34 @@ export function ProjectCard({
                             {subtext}
                         </p>
                     </div>
-                    <Switch />
+                    <ProjectTechIcons techs={techs} projectName={projectName} />
                 </div>
             </CardContent>
 
             <CardFooter className="flex justify-around">
                 {websiteLink && (
                     <a href={websiteLink} target="_blank" rel="noopener noreferrer" className="">
-                        <Globe className="h-6 w-6" />
+                        <Globe className="h-7 w-7" />
                     </a>
                 )}
                 {githubLink && (
                     <a href={githubLink} target="_blank" rel="noopener noreferrer" className="">
-                        <GithubIcon sizeh="h-6" sizew="w-6" variant={isDarkMode ? 'light' : 'dark'} />
+                        <GithubIcon sizeh="h-7" sizew="w-7" variant={isDarkMode ? 'light' : 'dark'} />
                     </a>
                 )}
                 {linkedinLink && (
                     <a href={linkedinLink} target="_blank" rel="noopener noreferrer" className="">
-                        <LinkedinIcon sizeh="h-6" sizew="w-6" />
+                        <LinkedinIcon sizeh="h-7" sizew="w-7" />
                     </a>
                 )}
                 {youtubeLink && (
                     <a href={youtubeLink} target="_blank" rel="noopener noreferrer" className="">
-                        <YouTubeIcon sizeh="h-6" sizew="w-6" />
+                        <YouTubeIcon sizeh="h-7" sizew="w-7" />
                     </a>
                 )}
                 {xlink && (
                     <a href={xlink} target="_blank" rel="noopener noreferrer" className="">
-                        <XIcon sizeh="h-6" sizew="w-6" variant={isDarkMode ? 'light' : 'dark'}/>
+                        <XIcon sizeh="h-6" sizew="w-6" variant={isDarkMode ? 'light' : 'dark'} />
                     </a>
                 )}
             </CardFooter>

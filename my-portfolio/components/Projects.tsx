@@ -15,8 +15,10 @@ export default function Projects() {
             websiteLink: 'https://ratemytrain.vercel.app',
             youtubeLink: 'https://yt.openinapp.co/ratemytrain',
             xlink: 'https://twtr.openinapp.co/rmtpost',
-            subhead: '',
-            subtext: ''
+            subhead: 'RateMyTrain was',
+            subtext: '',
+            techs: ["html5", "css3", "javascript", "react", "nextdotjs", "supabase", "vercel", "git", "github", "vscode"],
+            date: "June 2024"
         },
     ];
 
@@ -42,6 +44,8 @@ export default function Projects() {
                         xlink={project.xlink}
                         subhead={project.subhead}
                         subtext={project.subtext}
+                        techs={project.techs}
+                        date={project.date}
                     />
                 ))}
             </div>
