@@ -16,8 +16,8 @@ export default function Hero() {
                     <p className="md:text-lg text-base text-justify mb-4">
                         I&apos;m Harshil Sharma, a passionate web developer based in India. Here, you&apos;ll get a <s>polished</s> glimpse of my tech errands, where I create whatever the <i>heck</i> I want.
                     </p>
-                    <div className="md:text-lg text-base text-justify mb-4 pr-4 flex md:flex-row items-center grid-cols-1 md:grid-cols-2 space-x-2">
-                        <p className="text-left">Want to see the code behind this portfolio?</p> 
+                    <div className="md:text-lg text-base text-justify mb-4 pr-4 flex md:flex-row flex-col items-center grid-cols-1 md:grid-cols-2 space-x-2">
+                        <p className="text-left md:text-lg text-sm mb-2">Wanna see the code behind my portfolio?</p> 
                         <ShareButton />
                     </div>
                     

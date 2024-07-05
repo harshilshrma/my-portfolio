@@ -24,12 +24,9 @@ export default function AlertText() {
             {isSmallScreen && (
                 <Alert variant="destructive">
                     <Frown className="h-4 w-4" />
-                    <AlertTitle>Oops! This site isn&apos;t fully optimized for smaller screens yet. You can do either of the following:</AlertTitle>
+                    <AlertTitle>Oops! This site isn&apos;t fully optimized for smaller screens yet.</AlertTitle>
                     <AlertDescription>
-                        1. Switch to a desktop or laptop for the <strong>best</strong> experience.
-                    </AlertDescription>
-                    <AlertDescription>
-                        2. Go to your browser&apos;s settings (usually those 3 dots in the top right corner), select &quot;Desktop site&quot;, and zoom out for a <strong>better</strong> view.
+                        Switch to a desktop or laptop for the <strong>best</strong> experience.
                     </AlertDescription>
                 </Alert>
             )}

@@ -38,8 +38,8 @@ export default function ShareButton() {
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                    <DialogTitle>I&apos;m sure you loved my portfolio.</DialogTitle>
-                    <DialogDescription>
+                    <DialogTitle className="text-left">I&apos;m sure you loved my portfolio.</DialogTitle>
+                    <DialogDescription className="text-left">
                         Grab the Website and GitHub links here for sharing with pals or tossing to your team, especially if it&apos;s for work!
                     </DialogDescription>
                 </DialogHeader>

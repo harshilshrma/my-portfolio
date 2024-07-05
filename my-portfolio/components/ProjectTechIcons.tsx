@@ -48,7 +48,7 @@ export default function ProjectTechIcons({ techs = [], projectName }: ProjectTec
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                    <DialogTitle className="text-left">These are the technologies/frameworks that I&apos;ve used in {projectName}:</DialogTitle>
+                    <DialogTitle className="text-left">These are the technologies & frameworks that I&apos;ve used in {projectName}:</DialogTitle>
                     <DialogDescription className="text-sm text-left">(hover on the icons for their names)</DialogDescription>
                 </DialogHeader>
                 <HoverCard>
