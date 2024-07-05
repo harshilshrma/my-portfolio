@@ -16,8 +16,8 @@ export default function Clients() {
 
     return (
         <section className="my-8 text-center">
-            <h2 className="text-4xl font-bold mb-4">I&apos;ve worked at</h2>
-            <div className="flex justify-center items-center space-x-4">
+            <h2 className="md:text-4xl text-3xl font-bold mb-4">I&apos;ve worked at</h2>
+            <div className="flex md:flex-row flex-col justify-center items-center md:space-x-4 space-y-1">
                 <Link href={"https://tubemagic.com/"} target="_blank">
                     <Image
                         src={isDarkMode ? "/tubemagic.png" : "/tm.png"}
@@ -26,7 +26,7 @@ export default function Clients() {
                         height={100}
                     />
                 </Link>
-                <div className="text-lg">... and maybe with you  next?</div>
+                <div className="md:text-lg text-base">... and maybe with you  next?</div>
             </div>
             <div className="my-8"></div>
         </section>

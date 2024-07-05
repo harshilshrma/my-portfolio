@@ -10,6 +10,7 @@ const skills = [
     { id: 1, name: "HTML", category: "Markup Language", logo: "/html5.svg" },
     { id: 2, name: "CSS", category: "Style Sheet Language", logo: "/css3.svg" },
     { id: 3, name: "JavaScript", category: "Programming Language", logo: "/javascript.svg" },
+    { id: 22, name: "TypeScript", category: "Programming Language", logo: "/typescript.svg" },
     { id: 4, name: "React", category: "JavaScript Library", logo: "/react.svg" },
     { id: 5, name: "Next.js", category: "React Framework", logo: "/nextdotjs.svg" },
     { id: 6, name: "Node.js", category: "JavaScript Runtime", logo: "/nodedotjs.svg" },
@@ -35,7 +36,7 @@ export default function Skills() {
     const [api, setApi] = React.useState<CarouselApi>()
 
     return (
-        <div className="container mx-auto py-10 px-4">
+        <div className="container mx-auto py-10 px-8">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-5">I&apos;ve worked with</h1>
             <div className="text-center">
                 <span className="text-sm font-semibold">
@@ -57,12 +58,12 @@ export default function Skills() {
                         <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4">
                             <div className="p-1">
                                 <Card className={cn("shadow-md flex flex-row items-center")}>
-                                    <div className="flex-shrink-0 h-4 w-4 md:h-10 md:w-10 overflow-hidden m-4">
+                                    <div className="flex-shrink h-9 w-9 md:h-10 md:w-10 overflow-hidden m-4">
                                         <img className="h-full w-full object-cover" src={skill.logo} alt={skill.name} />
                                     </div>
-                                    <CardHeader>
-                                        <CardTitle>{skill.name}</CardTitle>
-                                        <CardDescription>{skill.category}</CardDescription>
+                                    <CardHeader className="pl-2">
+                                        <CardTitle className="md:text-xl text-lg">{skill.name}</CardTitle>
+                                        <CardDescription className="md:text-base text-sm">{skill.category}</CardDescription>
                                     </CardHeader>
                                 </Card>
                             </div>
