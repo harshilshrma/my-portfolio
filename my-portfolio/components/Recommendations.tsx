@@ -55,15 +55,15 @@ export default function Recommendations() {
                                     </div>
                                     <div className="flex flex-col ml-2">
                                         <CardHeader className="pt-4 pl-4 pr-4 pb-0">
-                                            <CardTitle className="">{recommendation.name}</CardTitle>
-                                            <CardDescription className="text-base">{recommendation.position} at {recommendation.company}</CardDescription>
+                                            <CardTitle className="text-2xl">{recommendation.name}</CardTitle>
+                                            <CardDescription className="md:text-lg text-base">{recommendation.position} at {recommendation.company}</CardDescription>
                                         </CardHeader>
                                         <CardContent className="pt-2 pl-4 pr-4 pb-4 flex-grow">
-                                            <p className="text-base mt-2">{recommendation.text}</p>
+                                            <p className="md:text-base text-sm mt-2">{recommendation.text}</p>
                                         </CardContent >
                                         <div className="flex">
-                                            <p className="pl-4 pb-4 pr-2 pb-0 text-muted-foreground text-base">as seen on</p>
-                                            <Linkedin href="https://www.linkedin.com/in/harshilshrma/" className="text-muted-foreground h-5 w-5"/>
+                                            <p className="pl-4 pb-4 pr-2 pb-0 text-muted-foreground md:text-lg text-base">as seen on</p>
+                                            <Linkedin href="https://www.linkedin.com/in/harshilshrma/" className="text-muted-foreground h-6 w-6" />
                                         </div>
                                     </div>
                                 </Card>
