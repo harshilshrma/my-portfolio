@@ -1,10 +1,19 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react'; // Assuming you have an arrow icon component
+import { ArrowUp } from 'lucide-react';
+import { Button } from './ui/button';
+import { useTheme } from 'next-themes';
 
 export default function BackToTopButton() {
     const [isVisible, setIsVisible] = useState(false);
+    const { theme } = useTheme();
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        // Logic to toggle dark mode
+        setIsDarkMode(theme === 'dark');
+    }, [theme]);
 
     useEffect(() => {
         const toggleVisibility = () => {
@@ -30,13 +39,14 @@ export default function BackToTopButton() {
     };
 
     return (
-        <button
-            className={`fixed bottom-6 right-6 bg-secondary text-foreground p-3 rounded-full shadow-md ${isVisible ? 'block' : 'hidden'}`}
+        <Button
+            className={`fixed bottom-6 right-6 p-3 text rounded-full shadow-md ${isVisible ? 'block' : 'hidden'}`}
             onClick={scrollToTop}
+            type="submit"
         >
-            <div className='pl-2 flex justify-center items-center text-primary'>
-                Back to top <ArrowUp size={24} />
+            <div className={`pl-2 flex justify-center ${isDarkMode ? 'text-black' : 'text-white'} items-center text-primary`}>
+                Back to top&nbsp;<ArrowUp size={20} />
             </div>
-        </button>
+        </Button>
     );
 };
