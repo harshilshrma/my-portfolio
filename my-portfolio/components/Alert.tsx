@@ -28,6 +28,9 @@ export default function AlertText() {
                     <AlertDescription>
                         Switch to a desktop or laptop for the <strong>best</strong> experience.
                     </AlertDescription>
+                    <AlertDescription>
+                        Highly Recommended: Refresh before proceeding further.
+                    </AlertDescription>
                 </Alert>
             )}
         </>
