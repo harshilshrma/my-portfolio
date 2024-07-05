@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster"
 import Footer from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { cn } from "@/lib/utils"
 const fontSans = FontSans({
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
           <Toaster />
           <BackToTopButton />
+          <SpeedInsights/>
         </ThemeProvider>
         <Analytics />
       </body>
