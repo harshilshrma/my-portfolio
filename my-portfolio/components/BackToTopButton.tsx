@@ -24,7 +24,7 @@ export default function BackToTopButton() {
             }
         };
 
-        // Event listener to check scroll position
+        // Event listener to check scroll position and toggle visibility
         window.addEventListener('scroll', toggleVisibility);
 
         // Clean up the event listener on component unmount
