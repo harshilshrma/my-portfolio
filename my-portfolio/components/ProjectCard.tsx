@@ -80,9 +80,6 @@ export function ProjectCard({
                         <p className="text-sm font-medium leading-none">
                             {subhead}
                         </p>
-                        <p className="text-sm text-muted-foreground">
-                            {subtext}
-                        </p>
                     </div>
                     <ProjectTechIcons techs={techs} projectName={projectName} />
                 </div>

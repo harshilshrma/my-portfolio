@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, MoveUpRight } from 'lucide-react';
 import Image from "next/image";
 import { useTheme } from 'next-themes';
 import { ModeToggle } from './mode-toggle';
@@ -34,6 +34,7 @@ const Navbar = () => {
                 <Link href="#projects" className="mx-2 text-primary">Projects</Link>
                 <Link href="#recs" className="mx-2 text-primary">Recommendations</Link>
                 <Link href="#contact" className="mx-2 text-primary">Contact Me</Link>
+                {/* <Link href="https://github.com/harshilshrma/my-portfolio" target="_blank" rel="noopener noreferrer" className="mx-2 text-primary no-underline hover:underline">GitHub <MoveUpRight width={16} height={16} className="inline-block mb-1" /></Link> */}
             </div>
 
             <ModeToggle />

@@ -42,8 +42,8 @@ export default function ProjectTechIcons({ techs = [], projectName }: ProjectTec
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="outline" size="icon" className="shadow-md">
-                    <MoveRight className="h-4 w-4" />
+                <Button variant="outline" className="shadow-md">
+                    TechStack<MoveRight className="ml-1 h-4 w-4" />
                 </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
