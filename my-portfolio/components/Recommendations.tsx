@@ -25,6 +25,14 @@ export default function Recommendations() {
             position: "Software Engineer",
             text: "I had the pleasure of working with Harshil, and he is one of the most hardworking individuals I've encountered. In just a few days, Harshil quickly grasped new concepts and implemented them efficiently, showcasing his ability to learn and adapt swiftly. Harshil has a proactive approach, often diving straight into finding solutions, which reflects his determination and focus on getting results. His dedication and rapid problem-solving skills make him a valuable asset to any team.",
             image: '/2.png'
+        },
+        {
+            id: 3,
+            name: "Harsh Kumar",
+            company: "TubeMagic LLC, Miami, Florida (USA)",
+            position: "Software Engineer",
+            text: "Harshil is a very hardworking and dedicated person. He consistently delivered high-quality work, showed great initiative, and was a pleasure to work with. His ability to learn quickly and contribute effectively is impressive. I highly recommend Harshil for any future opportunities.",
+            image: '/3.png'
         }
     ];
 
