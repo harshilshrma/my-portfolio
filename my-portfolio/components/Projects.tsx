@@ -7,6 +7,22 @@ import { MoveUpRight } from "lucide-react";
 export default function Projects() {
     const projects = [
         {
+            projectName: 'QwizX',
+            projectDescription: "QwizX is an interactive platform where you can create and take quizzes to challenge your knowledge. Whether you're testing yourself or competing with friends, QwizX makes learning fun and engaging.",
+            projectImage: '/qwizx.png',
+            imagewidth: 1280,
+            imageheight: 720,
+            githubLink: 'https://github.com/harshilshrma/qwizx',
+            linkedinLink: 'https://www.linkedin.com/posts/harshilshrma_project-webdev-nextjs-activity-7216753216279994368-bhjE?utm_source=share&utm_medium=member_desktop',
+            websiteLink: 'https://qwizx.vercel.app',
+            youtubeLink: '',
+            xlink: 'https://x.com/harshilshrma/status/1810988206667808940',
+            subhead: 'QwizX can be used as a quiz app or as a platform for learning.',
+            subtext: '',
+            techs: ["html5", "css3", "javascript", "typescript", "react", "nextdotjs", "supabase", "vercel", "git", "github", "vscode"],
+            date: "July 2024"
+        },
+        {
             projectName: 'RateMyTrain',
             projectDescription: 'RateMyTrain is a web app for collecting and managing train reviews, allowing passengers to share experiences and rate their journeys.',
             projectImage: '/ratemytrain.png',
