@@ -8,7 +8,7 @@ export default function Projects() {
     const projects = [
         {
             projectName: 'QwizX',
-            projectDescription: "QwizX is an interactive platform where you can create and take quizzes to challenge your knowledge. Whether you're testing yourself or competing with friends, QwizX makes learning fun and engaging.",
+            projectDescription: "QwizX is an interactive platform for creating and taking quizzes. Challenge your knowledge, test yourself, or compete with friends. Learning has never been this fun!",
             projectImage: '/qwizx.png',
             imagewidth: 1280,
             imageheight: 720,
