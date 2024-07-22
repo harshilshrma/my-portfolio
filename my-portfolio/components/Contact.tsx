@@ -7,6 +7,7 @@ import YouTubeIcon from "./icon/YoutubeIcon"
 import GithubIcon from "./icon/GithubIcon"
 import LinkedinIcon from "./icon/LinkedinIcon"
 import XIcon from "./icon/x";
+import Linktree from "./icon/Linktree";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button"
 import { ToastAction } from "@/components/ui/toast"
@@ -165,6 +166,14 @@ export default function ContactPage() {
                                 sizew={"w-12"}
                                 variant={isDarkMode ? "dark" : "light"}
                             />
+                        </a>
+                        <a
+                            href={"https://linktr.ee/harshilshrma"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className=""
+                        >
+                            <Linktree sizeh="h-12" sizew="w-12" />
                         </a>
                         <a
                             href={"https://yt.openinapp.co/meowcodes"}
