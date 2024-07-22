@@ -168,7 +168,7 @@ export default function ContactPage() {
                             />
                         </a>
                         <a
-                            href={"https://linktr.ee/harshilshrma"}
+                            href={"https://linktr.ee/harshilsharma"}
                             target="_blank"
                             rel="noopener noreferrer"
                             className=""
