@@ -142,8 +142,8 @@ export default function ContactPage() {
                             className=""
                         >
                             <GithubIcon
-                                sizeh={"h-12"}
-                                sizew={"w-12"}
+                                sizeh={"md:h-12 h-8"}
+                                sizew={"md:w-12 w-8"}
                                 variant={isDarkMode ? "dark" : "light"}
                             />
                         </a>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                             rel="noopener noreferrer"
                             className=""
                         >
-                            <LinkedinIcon sizeh="h-12" sizew="w-12" />
+                            <LinkedinIcon sizeh="md:h-12 h-8" sizew="md:w-12 w-8" />
                         </a>
                         <a
                             href={"https://twtr.openinapp.co/main"}
@@ -162,8 +162,8 @@ export default function ContactPage() {
                             className=""
                         >
                             <XIcon
-                                sizeh={"h-12"}
-                                sizew={"w-12"}
+                                sizeh={"md:h-12 h-8"}
+                                sizew={"md:w-12 w-8"}
                                 variant={isDarkMode ? "dark" : "light"}
                             />
                         </a>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                             rel="noopener noreferrer"
                             className=""
                         >
-                            <Linktree sizeh="h-12" sizew="w-12" />
+                            <Linktree sizeh="md:h-12 h-8" sizew="md:w-12 w-8" />
                         </a>
                         <a
                             href={"https://yt.openinapp.co/meowcodes"}
@@ -181,61 +181,63 @@ export default function ContactPage() {
                             rel="noopener noreferrer"
                             className=""
                         >
-                            <YouTubeIcon sizeh={"h-12"} sizew={"w-12"} />
+                            <YouTubeIcon sizeh={"md:h-12 h-8"} sizew={"md:w-12 w-8"} />
                         </a>
                     </div>
-                    <div className="flex justify-around items-center">
-                        <h5 className="text-background text-xl md:text-2xl font-bold">
+                    <div className="md:flex justify-around items-center pt-2">
+                        <h5 className="text-background text-lg items-center md:text-2xl font-bold pt-1">
                             Coding Accounts:
                         </h5>
-                        <a
-                            href="https://leetcode.com/u/harshilsharma2020/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=""
-                        >
-                            <img
-                                src={isDarkMode ? "/leetcode.svg" : "/LeetCode_Logo_1.svg"}
-                                alt="Leetcode"
-                                className="h-14 w-14"
-                            />
-                        </a>
-                        <a
-                            href="https://codeforces.com/profile/harshilshrma/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=""
-                        >
-                            <img
-                                src="/code-forces.svg"
-                                alt="Codeforces"
-                                className="h-12 w-12"
-                            />
-                        </a>
-                        <a
-                            href="https://www.geeksforgeeks.org/user/harshilshrma/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=""
-                        >
-                            <img
-                                src="/geeksforgeeks.svg"
-                                alt="GeeksForGeeks"
-                                className="h-14 w-14"
-                            />
-                        </a>
-                        <a
-                            href="https://www.naukri.com/code360/profile/harshilshrma/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=""
-                        >
-                            <img
-                                src="/codingninjas.svg"
-                                alt="Coding Ninjas"
-                                className="h-10 w-10"
-                            />
-                        </a>
+                        <div className="flex items-center justify-around space-x-8 pt-2">
+                            <a
+                                href="https://leetcode.com/u/harshilsharma2020/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=""
+                            >
+                                <img
+                                    src={isDarkMode ? "/leetcode.svg" : "/LeetCode_Logo_1.svg"}
+                                    alt="Leetcode"
+                                    className="md:h-12 h-10 md:w-12 w-10"
+                                />
+                            </a>
+                            <a
+                                href="https://codeforces.com/profile/harshilshrma/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=""
+                            >
+                                <img
+                                    src="/code-forces.svg"
+                                    alt="Codeforces"
+                                    className="md:h-12 h-10 md:w-12 w-10"
+                                />
+                            </a>
+                            <a
+                                href="https://www.geeksforgeeks.org/user/harshilshrma/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=""
+                            >
+                                <img
+                                    src="/geeksforgeeks.svg"
+                                    alt="GeeksForGeeks"
+                                    className="md:h-12 h-10 md:w-12 w-10"
+                                />
+                            </a>
+                            <a
+                                href="https://www.naukri.com/code360/profile/harshilshrma/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=""
+                            >
+                                <img
+                                    src="/codingninjas.svg"
+                                    alt="Coding Ninjas"
+                                    className="md:h-12 h-8 md:w-12 w-8"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className="bg-background p-8 rounded-lg shadow-md">
