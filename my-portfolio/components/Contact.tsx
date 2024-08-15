@@ -7,6 +7,7 @@ import YouTubeIcon from "./icon/YoutubeIcon"
 import GithubIcon from "./icon/GithubIcon"
 import LinkedinIcon from "./icon/LinkedinIcon"
 import XIcon from "./icon/x";
+import LeetcodeIcon from "./icon/LeetCode";
 import Linktree from "./icon/Linktree";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button"
@@ -182,6 +183,59 @@ export default function ContactPage() {
                             className=""
                         >
                             <YouTubeIcon sizeh={"h-12"} sizew={"w-12"} />
+                        </a>
+                    </div>
+                    <div className="flex justify-around items-center">
+                        <h5 className="text-background text-xl md:text-2xl font-bold">
+                            Coding Accounts:
+                        </h5>
+                        <a
+                            href="https://leetcode.com/u/harshilsharma2020/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className=""
+                        >
+                            <img
+                                src={isDarkMode ? "/leetcode.svg" : "/LeetCode_Logo_1.svg"}
+                                alt="Leetcode"
+                                className="h-14 w-14"
+                            />
+                        </a>
+                        <a
+                            href="https://codeforces.com/profile/harshilshrma/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className=""
+                        >
+                            <img
+                                src="/code-forces.svg"
+                                alt="Codeforces"
+                                className="h-12 w-12"
+                            />
+                        </a>
+                        <a
+                            href="https://www.geeksforgeeks.org/user/harshilshrma/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className=""
+                        >
+                            <img
+                                src="/geeksforgeeks.svg"
+                                alt="GeeksForGeeks"
+                                className="h-14 w-14"
+                            />
+                        </a>
+                        <a
+                            href="https://www.naukri.com/code360/profile/harshilshrma/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className=""
+                        >
+                            <img
+                                src="/codingninjas.svg"
+                                alt="Coding Ninjas"
+                                className="h-10 w-10"
+                            />
                         </a>
                     </div>
                 </div>
