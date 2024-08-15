@@ -222,7 +222,7 @@ export default function ContactPage() {
                                 <img
                                     src="/geeksforgeeks.svg"
                                     alt="GeeksForGeeks"
-                                    className="md:h-12 h-10 md:w-12 w-10"
+                                    className="md:h-14 h-10 md:w-14 w-10"
                                 />
                             </a>
                             <a
@@ -234,7 +234,7 @@ export default function ContactPage() {
                                 <img
                                     src="/codingninjas.svg"
                                     alt="Coding Ninjas"
-                                    className="md:h-12 h-8 md:w-12 w-8"
+                                    className="md:h-10 h-8 md:w-10 w-8"
                                 />
                             </a>
                         </div>
