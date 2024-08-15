@@ -13,7 +13,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { cn } from "@/lib/utils"
 const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-sans", 
 })
 
 const inter = Inter({ subsets: ["latin"] });
