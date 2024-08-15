@@ -7,7 +7,6 @@ import YouTubeIcon from "./icon/YoutubeIcon"
 import GithubIcon from "./icon/GithubIcon"
 import LinkedinIcon from "./icon/LinkedinIcon"
 import XIcon from "./icon/x";
-import LeetcodeIcon from "./icon/LeetCode";
 import Linktree from "./icon/Linktree";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button"
